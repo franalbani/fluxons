@@ -53,11 +53,3 @@ as its reference will be lost.
 * Node and Edges names must be valid python variable names.
 * Node and Edges names cannot be the same as List members.
 * Node and Edges names cannot be `name`, `owner`, `md` or `dest`.
-
-# TODO
-
-[ ]  Add `hypothesis` testing.
-[ ]  Improve `graphviz` interface: styles.
-[ ]  Subgraphs, clusters.
-[ ]  Pay attention to underscore conventions.
-[ ]  Handle non directed graphs.

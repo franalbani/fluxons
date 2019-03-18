@@ -68,3 +68,17 @@ class Consistency(TestCase):
         g.fran.writes.code
         edge = g.fran[0]
         self.assertIs(edge.dest, g.code)
+
+
+class Metadata(TestCase):
+
+    def test_node_md(self):
+        g = Graph()
+        g.fran(type='human', tests_code=True)
+        self.assertDictEqual({'type': 'human', 'tests_code': True}, g.fran.md)
+
+    def test_edge_md(self):
+        g = Graph()
+        g.fran.writes(frequency='always', quality=10).tests
+        edge = g.fran[0]
+        self.assertDictEqual({'frequency': 'always', 'quality': 10}, edge.md)

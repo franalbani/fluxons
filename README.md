@@ -1,4 +1,4 @@
-# fluxonss
+# fluxons
 
 Python library for easy graph creation.
 

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from unittest import TestCase
-from fluxon import Graph, Node, Edge
+from fluxons import Graph, Node, Edge
 
 
 class Instantiation(TestCase):

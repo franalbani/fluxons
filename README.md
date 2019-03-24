@@ -1,4 +1,4 @@
-# fluxon
+# fluxonss
 
 Python library for easy graph creation.
 
@@ -8,22 +8,22 @@ Powered by python's magic `__getattr__` and `__call__`,
 allows its users to express relations like:
 
 ```
-g.fran.writes.fluxon
+g.fran.writes.fluxons
 ```
-that will create *on-the-fly* the nodes `fran` and `fluxon`
+that will create *on-the-fly* the nodes `fran` and `fluxons`
 as members of `g` and the edge `writes` as member of `fran`
-pointing to `fluxon`.
+pointing to `fluxons`.
 
 Chain relations are possible:
 ```
-g.fran.writes.fluxon.in.python
+g.fran.writes.fluxons.in.python
 ```
 with the expected results.
 
 Nodes and Edges can be called as functions to store metadata
 inside them:
 ```
-g.fran(type='human').writes(lang='python').fluxon(type='code')
+g.fran(type='human').writes(lang='python').fluxons(type='code')
 ```
 Useful for `graphviz` later use.
 
@@ -32,15 +32,15 @@ Useful for `graphviz` later use.
 # How to combine with `graphviz`
 
 ```
-from fluxon import Graph
+from fluxons import Graph
 g = Graph()
-g.fran.writes.fluxon
+g.fran.writes.fluxons
 
 from graphviz import Digraph
 dg = Digraph()
 [dg.node(n.name, **n.md) for n in g]
 [dg.edge(n.name, e.dest.name, **e.md) for n in g for e in n]
-dg.render('/tmp/fluxon_graph')
+dg.render('/tmp/fluxons_graph')
 ```
 
 # Caveats

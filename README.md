@@ -53,3 +53,16 @@ as its reference will be lost.
 * Node and Edges names must be valid python variable names.
 * Node and Edges names cannot be the same as List members.
 * Node and Edges names cannot be `name`, `owner`, `md` or `dest`.
+
+# Usage
+
+## Installation in a virtualenv
+
+* `python -m venv venv`
+* `. venv/bin/activate`
+* `pip install -U pip`
+* `pip install .`
+
+## Run tests
+
+* `python -m unittest discover tests`

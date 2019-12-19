@@ -12,7 +12,9 @@ jobs:
 
     - name: Build
       run: |
-        echo 123 > docs/index.html
+        # echo 123 > docs/index.html
+        touch asd.qwe
+        ls -la
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3

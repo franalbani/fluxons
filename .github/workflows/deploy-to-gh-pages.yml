@@ -12,14 +12,13 @@ jobs:
 
     - name: Build
       run: |
-        # echo 123 > docs/index.html
-        touch asd.qwe
-        ls -la
+        mkdir docs_build && cd docs_build
+        date > index.html
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: master
-        FOLDER: docs
+        FOLDER: docs_build
         TARGET_FOLDER: docs

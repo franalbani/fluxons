@@ -22,7 +22,7 @@ def git_describe():
 
 setup(
     name='fluxons',
-    version=git_describe(),
+    version='0.1+' + git_describe(),
     description='',
     long_description='',
     url='https://github.com/franalbani/fluxons',

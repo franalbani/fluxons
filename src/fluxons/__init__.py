@@ -1,2 +1,1 @@
-def hello() -> str:
-    return "Hello from fluxons!"
+from .core import Graph, Node, Edge

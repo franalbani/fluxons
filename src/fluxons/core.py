@@ -1,11 +1,6 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-from attr import attrs, attrib, Factory
-
+from dataclasses import dataclass, field
 
 class Graph(list):
-
     def __getattr__(self, a):
         new_node = Node(name=a, owner=self)
         setattr(self, a, new_node)  # to avoid duplicity
@@ -13,11 +8,11 @@ class Graph(list):
         return new_node
 
 
-@attrs
+@dataclass
 class Node(list):
-    name = attrib()
-    owner = attrib(repr=False)
-    md = attrib(default=Factory(dict))
+    name: str
+    owner: Graph
+    md: dict = field(default_factory=dict)
 
     def __getattr__(self, a):
         new_edge = Edge(name=a, owner=self.owner)
@@ -29,12 +24,12 @@ class Node(list):
         return self
 
 
-@attrs
+@dataclass
 class Edge:
-    name = attrib()
-    owner = attrib(repr=False)
-    dest = attrib(default=None)
-    md = attrib(default=Factory(dict))
+    name: str
+    owner: Node
+    dest: Node = None
+    md: dict = field(default_factory=dict)
 
     def __getattr__(self, a):
         self.dest = getattr(self.owner, a)

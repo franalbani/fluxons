@@ -56,13 +56,6 @@ as its reference will be lost.
 
 # Usage
 
-## Installation in a virtualenv
-
-* `python -m venv venv`
-* `. venv/bin/activate`
-* `pip install -U pip`
-* `pip install .`
-
 ## Run tests
 
-* `python -m unittest discover tests`
+* `uv run python -m unittest discover tests`

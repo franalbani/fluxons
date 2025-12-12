@@ -60,7 +60,7 @@ See [solar_system.py](examples/solar_system.py) example:
 * `uv run python examples/solar_system.py`
   * will create `solar_system.svg`
 * If you have kitty, you can see it in the terminal:
-  * ``kitten icat solar_system.svg`
+  * `kitten icat solar_system.svg`
 
 ![example](examples/solar_system.svg)
 
